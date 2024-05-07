@@ -24,24 +24,25 @@ class SecondButton extends StatelessWidget {
     return GestureDetector(
       onTap: onpressed,
       child: Container(
+        width: 150,
+        height: 50,
         decoration: BoxDecoration(
           color: AppColors.primary,
           borderRadius: BorderRadius.circular(
             AppSize.size30,
           ),
         ),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 59,
-            vertical: 15,
-          ),
-          child: Text(
-            text,
-            style: GoogleFonts.poppins(
-              fontSize: size,
-              fontWeight: fontWeight,
-              color: color,
-              fontStyle: FontStyle.normal,
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(15),
+            child: Text(
+              text,
+              style: GoogleFonts.poppins(
+                fontSize: size,
+                fontWeight: fontWeight,
+                color: color,
+                fontStyle: FontStyle.normal,
+              ),
             ),
           ),
         ),

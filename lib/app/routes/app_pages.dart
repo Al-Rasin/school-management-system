@@ -2,14 +2,12 @@ import 'package:get/get.dart';
 
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/login/bindings/login_binding.dart';
+import '../modules/login/views/login_view.dart';
+import '../modules/on_boarding/bindings/on_boarding_binding.dart';
+import '../modules/on_boarding/views/on_boarding_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
-import '../modules/splash_fourth/bindings/splash_fourth_binding.dart';
-import '../modules/splash_fourth/views/splash_fourth_view.dart';
-import '../modules/splash_sec/bindings/splash_sec_binding.dart';
-import '../modules/splash_sec/views/splash_sec_view.dart';
-import '../modules/splash_third/bindings/splash_third_binding.dart';
-import '../modules/splash_third/views/splash_third_view.dart';
 
 part 'app_routes.dart';
 
@@ -30,19 +28,14 @@ class AppPages {
       binding: SplashBinding(),
     ),
     GetPage(
-      name: _Paths.SPLASH_SEC,
-      page: () => const SplashSecView(),
-      binding: SplashSecBinding(),
+      name: _Paths.ON_BOARDING,
+      page: () => const OnBoardingView(),
+      binding: OnBoardingBinding(),
     ),
     GetPage(
-      name: _Paths.SPLASH_THIRD,
-      page: () => const SplashThirdView(),
-      binding: SplashThirdBinding(),
-    ),
-    GetPage(
-      name: _Paths.SPLASH_FOURTH,
-      page: () => const SplashFourthView(),
-      binding: SplashFourthBinding(),
+      name: _Paths.LOGIN,
+      page: () => const LoginView(),
+      binding: LoginBinding(),
     ),
   ];
 }

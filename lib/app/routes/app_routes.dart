@@ -8,6 +8,8 @@ abstract class Routes {
   static const SPLASH_SEC = _Paths.SPLASH_SEC;
   static const SPLASH_THIRD = _Paths.SPLASH_THIRD;
   static const SPLASH_FOURTH = _Paths.SPLASH_FOURTH;
+  static const ON_BOARDING = _Paths.ON_BOARDING;
+  static const LOGIN = _Paths.LOGIN;
 }
 
 abstract class _Paths {
@@ -17,4 +19,6 @@ abstract class _Paths {
   static const SPLASH_SEC = '/splash-sec';
   static const SPLASH_THIRD = '/splash-third';
   static const SPLASH_FOURTH = '/splash-fourth';
+  static const ON_BOARDING = '/on-boarding';
+  static const LOGIN = '/login';
 }

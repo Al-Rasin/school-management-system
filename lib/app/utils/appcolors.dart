@@ -8,4 +8,5 @@ class AppColors {
   static const Color borderColor = Color(0xff6B7B8C);
   static const Color backgroundColor = Color(0xffed1c24);
   static const Color whiteText = Color(0xffffffff);
+  static const Color bgContainer =  Color.fromRGBO(237, 28, 36, 0.10);
 }

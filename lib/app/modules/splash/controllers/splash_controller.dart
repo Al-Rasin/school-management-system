@@ -10,9 +10,9 @@ class SplashController extends GetxController {
 
   navigateToOtherScreen() async {
     Future.delayed(
-      const Duration(seconds: 1),
+      const Duration(seconds: 2),
       () async {
-        await Get.offAllNamed(Routes.SPLASH_SEC);
+        await Get.offAllNamed(Routes.ON_BOARDING);
       },
     );
   }

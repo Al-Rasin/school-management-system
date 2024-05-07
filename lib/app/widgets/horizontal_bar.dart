@@ -8,8 +8,9 @@ class HorizontalBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.all(4),
       height: 4,
-      width: 33,
+      width: 30,
       decoration: BoxDecoration(
         color: color,
         borderRadius: BorderRadius.circular(
