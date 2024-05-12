@@ -14,7 +14,7 @@ class OnBoardingController extends GetxController {
   }
 
   void navigateToHome() {
-    Get.offAllNamed(Routes.HOME);
+    Get.offAllNamed(Routes.LOGIN);
   }
 
   List<OnBoardingModel> onBoardingPages = [
