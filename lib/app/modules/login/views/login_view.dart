@@ -12,6 +12,7 @@ import '../controllers/login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
   const LoginView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,47 +48,61 @@ class LoginView extends GetView<LoginController> {
                   leading: SvgPicture.asset('assets/images/svg/username.svg'),
                 ),
                 const SizedBox(height: AppSize.size15),
-                CustomTextField(
-                  hint: 'Password',
-                  textEditingController: controller.passwordController,
-                  leading: SvgPicture.asset('assets/images/svg/lock.svg'),
-                  trailing: [
-                    IconButton(
-                      onPressed: () {},
-                      icon: SvgPicture.asset('assets/images/svg/hide_password.svg'),
-                    ),
-                  ],
+                Obx(
+                  () => CustomTextField(
+                    hint: 'Password',
+                    textEditingController: controller.passwordController,
+                    leading: SvgPicture.asset('assets/images/svg/lock.svg'),
+                    obsecureText: controller.obsecureText.value,
+                    trailing: [
+                      IconButton(
+                        onPressed: () {
+                          controller.showPassword();
+                        },
+                        icon: SvgPicture.asset(
+                          'assets/images/svg/hide_password.svg',
+                          color: controller.obsecureText.value ? AppColors.subTextColor : AppColors.primary,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 const SizedBox(
                   height: AppSize.size20,
                 ),
                 Row(
                   children: [
-                    Checkbox(
-                      value: true,
-                      onChanged: (value) {},
-                      activeColor: AppColors.primary,
+                    Obx(
+                      () => Checkbox(
+                        value: controller.checkBoxValue.value,
+                        onChanged: (value) {
+                          controller.onChanged(value!);
+                        },
+                        activeColor: AppColors.primary,
+                      ),
                     ),
                     Text(
                       'Remeber Me',
                       style: AppTextStyles.small12SubText,
                     ),
                     const Spacer(),
-                    Text(
-                      'Forgot your\nUsername or Password?',
-                      style: AppTextStyles.redSmall12Text,
-                      textAlign: TextAlign.end,
+                    GestureDetector(
+                      onTap: controller.nevigateToForgetPasswor,
+                      child: Text(
+                        'Forgot your\nUsername or Password?',
+                        style: AppTextStyles.redSmall12Text,
+                        textAlign: TextAlign.end,
+                      ),
                     ),
                   ],
                 ),
                 const SizedBox(height: 37),
                 PrimaryButton(
-                    text: 'Log In',
-                    onpressed: () {
-                      String username = controller.usernameController.text;
-                      String password = controller.passwordController.text;
-                      print('Username: $username, Password: $password');
-                    })
+                  text: 'Log In',
+                  onpressed: () {
+                    controller.nevigateToBottomNavBar();
+                  },
+                ),
               ],
             ),
           )

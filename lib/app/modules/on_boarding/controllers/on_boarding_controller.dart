@@ -9,11 +9,11 @@ class OnBoardingController extends GetxController {
     if (selectedIndex < onBoardingPages.length - 1) {
       selectedIndex++;
     } else {
-      navigateToHome();
+      navigateToLogin();
     }
   }
 
-  void navigateToHome() {
+  void navigateToLogin() {
     Get.offAllNamed(Routes.LOGIN);
   }
 

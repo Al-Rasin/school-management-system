@@ -38,4 +38,6 @@ class AppTextStyles {
     fontWeight: FontWeight.w500,
     color: Colors.red,
   );
+
+  
 }

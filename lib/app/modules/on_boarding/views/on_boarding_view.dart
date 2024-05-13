@@ -22,7 +22,7 @@ class OnBoardingView extends GetView<OnBoardingController> {
             children: [
               TextButton(
                 onPressed: () {
-                  controller.navigateToHome();
+                  controller.navigateToLogin();
                 },
                 child: Text(
                   'Skip',

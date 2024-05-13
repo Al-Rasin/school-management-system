@@ -42,6 +42,7 @@ class CustomTextField extends StatelessWidget {
         children: [
           Expanded(
             child: TextFormField(
+              obscureText: obsecureText,
               decoration: InputDecoration(
                 border: InputBorder.none,
                 icon: leading,

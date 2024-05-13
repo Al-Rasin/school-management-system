@@ -10,6 +10,12 @@ abstract class Routes {
   static const SPLASH_FOURTH = _Paths.SPLASH_FOURTH;
   static const ON_BOARDING = _Paths.ON_BOARDING;
   static const LOGIN = _Paths.LOGIN;
+  static const FORGET = _Paths.FORGET;
+  static const BOTTOM_NAV_BAR = _Paths.BOTTOM_NAV_BAR;
+  static const CALENDAR = _Paths.CALENDAR;
+  static const FEES = _Paths.FEES;
+
+  static const APP_MENU = _Paths.APP_MENU;
 }
 
 abstract class _Paths {
@@ -21,4 +27,9 @@ abstract class _Paths {
   static const SPLASH_FOURTH = '/splash-fourth';
   static const ON_BOARDING = '/on-boarding';
   static const LOGIN = '/login';
+  static const FORGET = '/forget';
+  static const BOTTOM_NAV_BAR = '/bottom-nav-bar';
+  static const CALENDAR = '/calendar';
+  static const FEES = '/fees';
+  static const APP_MENU = '/app-menu';
 }
